@@ -14,15 +14,11 @@ const executor = (resolve, reject) => {
 
 
 const promise = new Promise(executor);
-
-
-promise.then(
-    (result) => {
+promise
+    .then((result) => {
         console.log(result);
-
-    },
-    (error) => {
+    })
+    .catch((error) => {
         console.log(error);
-    }
-);
+    });
 
